@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import time
 
-
+# 네이버 뉴스 제목 및 링크 데이터 크롤링
 def crawl_news(keyword, lastpage):
     results = []
     for i in range(1, int(lastpage) * 10, 10):
