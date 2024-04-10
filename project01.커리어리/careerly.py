@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
+# 개발자 커뮤니티 커리어리 검색어 크롤링
 def crawl_careerly(keyword):
     url = f"https://careerly.co.kr/search?query=%{keyword}"
     response = requests.get(url)
