@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import time
+import random
 
 # 네이버 뉴스 제목 및 링크 데이터 크롤링
 def crawl_news(keyword, lastpage):
@@ -17,7 +18,8 @@ def crawl_news(keyword, lastpage):
             link = item.attrs['href']
             results.append({'title': title, 'link': link})
         
-        time.sleep(0.5)
+        random_wait_time = random.uniform(2, 4)
+        time.sleep(random_wait_time)
 
     return results
 
